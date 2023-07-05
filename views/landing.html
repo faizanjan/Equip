@@ -1,0 +1,366 @@
+{% extends 'index.html' %} {% block content %}
+
+<div class="pb-96">
+  <!-- Hero -->
+  <div class="my-0" style="background: linear-gradient(#dfe7fd, white)">
+    <div class="flex flex-col items-center pt-16 mb-24">
+      <h2 class="text-5xl font-black mb-7 text-blue">
+        Shortist Candidates <span class="text-green">In Minutes</span>
+      </h2>
+
+      <div class="flex flex-row items-center text-lg text-blue mb-10">
+        <h3>For tech and non-tech roles</h3>
+        <div
+          class="h-8 mx-14 border"
+          style="background-color: #7387dd; width: 4px"
+        ></div>
+        <h3>At $1 per candidate</h3>
+      </div>
+
+      <button
+        class="rounded-full bg-green px-8 py-3 text-white uppercase hover:scale-105 transition-all"
+      >
+        Explore Tests
+      </button>
+      <span class="text-sm text-blue mt-3"
+        >Different Tests for Different Roles</span
+      >
+    </div>
+
+    <div class="flex flex-col items-center mb-24">
+      <h2 class="text-3xl text-blue font-black mb-10">
+        Why use <span class="text-green">Equip?</span>
+      </h2>
+
+      <div class="flex flex-row justify-around w-10/12">
+        <div class="w-1/4 flex flex-row items-center">
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 18H12.015M18 18H18.015M24 18H24.015M31.5 18C31.5 24.6274 25.4558 30 18 30C15.6911 30 13.5176 29.4848 11.617 28.5766L4.5 30L6.59248 24.42C5.26735 22.5635 4.5 20.3614 4.5 18C4.5 11.3726 10.5442 6 18 6C25.4558 6 31.5 11.3726 31.5 18Z"
+              stroke="#5EBD84"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <span class="ms-5 text-lg text-blue font-light leading-7"
+            >You're manually interviewing too
+            <span class="font-black">many candidates</span></span
+          >
+        </div>
+
+        <div class="w-1/4 flex flex-row items-center">
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.9983 13.5V16.5M17.9983 22.5H18.0133M7.60604 28.5H28.3906C30.7 28.5 32.1434 26 30.9887 24L20.5964 6C19.4417 4 16.555 4 15.4003 6L5.00796 24C3.85326 26 5.29664 28.5 7.60604 28.5Z"
+              stroke="#5EBD84"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="ms-5 text-lg text-blue font-light leading-7"
+            ><span class="font-black">No familiarity</span> with the skils
+            candidate is being hired for</span
+          >
+        </div>
+
+        <div class="w-1/4 flex flex-row items-center">
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.2071 20.2929C13.8166 19.9024 13.1834 19.9024 12.7929 20.2929C12.4024 20.6834 12.4024 21.3166 12.7929 21.7071L14.2071 20.2929ZM16.5 24L15.7929 24.7071C16.1834 25.0976 16.8166 25.0976 17.2071 24.7071L16.5 24ZM23.2071 18.7071C23.5976 18.3166 23.5976 17.6834 23.2071 17.2929C22.8166 16.9024 22.1834 16.9024 21.7929 17.2929L23.2071 18.7071ZM27.5 10.5V28.5H29.5V10.5H27.5ZM25.5 30.5H10.5V32.5H25.5V30.5ZM8.5 28.5V10.5H6.5V28.5H8.5ZM10.5 8.5H13.5V6.5H10.5V8.5ZM22.5 8.5H25.5V6.5H22.5V8.5ZM10.5 30.5C9.39543 30.5 8.5 29.6046 8.5 28.5H6.5C6.5 30.7091 8.29086 32.5 10.5 32.5V30.5ZM27.5 28.5C27.5 29.6046 26.6046 30.5 25.5 30.5V32.5C27.7091 32.5 29.5 30.7091 29.5 28.5H27.5ZM29.5 10.5C29.5 8.29086 27.7091 6.5 25.5 6.5V8.5C26.6046 8.5 27.5 9.39543 27.5 10.5H29.5ZM8.5 10.5C8.5 9.39543 9.39543 8.5 10.5 8.5V6.5C8.29086 6.5 6.5 8.29086 6.5 10.5H8.5ZM12.7929 21.7071L15.7929 24.7071L17.2071 23.2929L14.2071 20.2929L12.7929 21.7071ZM17.2071 24.7071L23.2071 18.7071L21.7929 17.2929L15.7929 23.2929L17.2071 24.7071ZM16.5 5.5H19.5V3.5H16.5V5.5ZM19.5 9.5H16.5V11.5H19.5V9.5ZM16.5 9.5C15.3954 9.5 14.5 8.60457 14.5 7.5H12.5C12.5 9.70914 14.2909 11.5 16.5 11.5V9.5ZM21.5 7.5C21.5 8.60457 20.6046 9.5 19.5 9.5V11.5C21.7091 11.5 23.5 9.70914 23.5 7.5H21.5ZM19.5 5.5C20.6046 5.5 21.5 6.39543 21.5 7.5H23.5C23.5 5.29086 21.7091 3.5 19.5 3.5V5.5ZM16.5 3.5C14.2909 3.5 12.5 5.29086 12.5 7.5H14.5C14.5 6.39543 15.3954 5.5 16.5 5.5V3.5Z"
+              fill="#5EBD84"
+            />
+          </svg>
+          <span class="ms-5 text-lg text-blue font-light leading-7"
+            >Your current shortlisting process needs
+            <span class="font-black">streamlining</span></span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row justify-around items-center mx-20 pb-10">
+      <span class="text-3xl font-black text-blue w-1/3 leading-snug">
+        Give us he haystack, we'll find you the
+        <span class="text-green">sharp needle!</span>
+      </span>
+
+      <span class="text-lg text-blue w-2/5 leading-7">
+        Exceptional Companies are just teams of Exceptional Individuals. We’ll
+        equip you with these exceptional individuals
+      </span>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="bg-blue p-7 pb-0">
+    <div class="flex flex-row justify-between text-white">
+      <div
+        class="rounded-3xl box-border p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent w-1/4"
+      >
+        <h3 class="font-bold text-xl mb-4">Quick Assessment Creation</h3>
+        <span class="font-light"
+          >In less than 1 min, specify role, choose from suggested tests, set
+          weightages for skills</span
+        >
+      </div>
+
+      <div
+        class="rounded-3xl box-border p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent w-1/4"
+      >
+        <h3 class="font-bold text-xl mb-4">Simple Dashboard</h3>
+        <span class="font-light"
+          >Effortlessly manage candidate pipeline, set cut-off, sort by test
+          scores, track stages, export results.</span
+        >
+      </div>
+
+      <div
+        class="rounded-3xl box-border p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent w-1/4"
+      >
+        <h3 class="font-bold text-xl mb-4">Our Questions and Yours</h3>
+        <span class="font-light"
+          >Use our Question Banks for the tests. Or add your own existing
+          questions too</span
+        >
+      </div>
+
+      <div
+        class="rounded-3xl box-border p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent w-1/4"
+      >
+        <h3 class="font-bold text-xl mb-4">Prevent Cheating on Tests</h3>
+        <span class="font-light"
+          >Track candidates’ cameras and screens. Detect if they are using
+          Google or ChatGPT, etc</span
+        >
+      </div>
+    </div>
+
+    <div class="firefox-img">
+      <img class="mx-auto" src="/firefox_equip.png" alt="" />
+    </div>
+  </div>
+
+  <!-- Explore or Start Hiring -->
+  <div
+    class="p-24 flex flex-row justify-center gap-5 text-blue w-11/12 mx-auto"
+  >
+    <div class="flex flex-col gap-5 w-3/5">
+      <div
+        class="flex flex-row justify-between items-center p-10 rounded-3xl hover:shadow-lg hover:scale-95 transition-all"
+        style="background: #ebe4ff"
+      >
+        <div class="me-10">
+          <h2 class="text-3xl font-black mb-5">Try our Demo Tests</h2>
+          <span class=""
+            >Do you hire Designers based on their Taxation skills? Of course
+            not! Our role-specific tests evaluate the relevant skills
+            perfectly</span
+          >
+          <a href="" class="block mt-8 uppercase font-bold tracking-widest"
+            >explore test &nbsp; &gt;</a
+          >
+        </div>
+
+        <img src="/exploreTest.png" />
+      </div>
+
+      <div
+        class="flex flex-row justify-between items-center p-10 rounded-3xl hover:shadow-lg hover:scale-95 transition-all"
+        style="background: #c0e1bf"
+      >
+        <div class="explore-body me-10">
+          <h2 class="text-3xl font-black mb-5">Explore Recruiter Dashboard</h2>
+          <span class=""
+            >Preview how a recruiter dashboard would look. Play around with
+            Assessments, Results, Shortlisting and other features</span
+          >
+          <a href="" class="block mt-8 uppercase font-bold tracking-widest"
+            >explore dashboard &nbsp; &gt;</a
+          >
+        </div>
+
+        <img src="/exploreDashboard.png" alt="" />
+      </div>
+    </div>
+
+    <div
+      class="p-10 rounded-3xl w-2/5 hover:shadow-lg hover:scale-95 transition-all"
+      style="background-color: #d2deff"
+    >
+      <h2 class="text-3xl font-black mb-5">14-day Free Trial</h2>
+      <span>
+        Enjoy a 14-day free trial period - no credit card required. Experience
+        our product without commitments. Evaluate 25 candidates for free
+      </span>
+
+      <img class="my-8 ms-auto me-10" src="/startHiring.png" alt="" />
+
+      <a class="uppercase font-bold tracking-widest" href=""
+        >start hiring <br />
+        at $1/candidate &nbsp; &gt;</a
+      >
+    </div>
+  </div>
+
+  <!--  -->
+  <div>
+    <h2
+      class="text-blue text-2xl font-black flex flex-row justify-center items-center mb-12"
+    >
+      <img class="me-5" src="lightening-bolt.png" alt="" />
+      Our customers shortlist the top 3% performers, &nbsp;
+      <span class="text-green"> saving 97% of their time </span>
+    </h2>
+
+    <div
+      class="flex flex-row mx-auto gap-5 w-9/12 justify-between text-blue mb-24"
+    >
+      <div
+        class="w-1/3 mx-5 p-8 rounded-2xl hover:shadow-md"
+        style="background: #f9fafb"
+      >
+        <h3 class="flex flex-row items-center mb-5">
+          <img class="" src="/ready-to-use-tests.png" alt="" />
+          <span class="ms-3 text-xl font-medium">Ready-to-Use Tests</span>
+        </h3>
+        <p class="text-sm leading-6">
+          Tests for Aptitude, Programming, Communication & Interpersonal Skills,
+          etc
+        </p>
+      </div>
+
+      <div
+        class="w-1/3 mx-5 p-8 rounded-2xl hover:shadow-md"
+        style="background: #f9fafb"
+      >
+        <h3 class="flex flex-row items-center mb-5">
+          <img class="" src="/skill-based-questions.png" alt="" />
+          <span class="ms-3 text-xl font-medium">Skill-based Questions</span>
+        </h3>
+        <p class="text-sm leading-6">
+          We test for Knowledge needed to perform the job competently. Not to
+          pass an Entrance exam.
+        </p>
+      </div>
+
+      <div
+        class="w-1/3 mx-5 p-8 rounded-2xl hover:shadow-md"
+        style="background: #f9fafb"
+      >
+        <h3 class="flex flex-row items-center mb-5">
+          <img class="" src="/pricing-that-scales.png" alt="" />
+          <span class="ms-3 text-xl font-medium">Pricing that Scales</span>
+        </h3>
+        <p class="text-sm leading-6">
+          Small and large teams assess tens to tens of thousands of candidates
+          on Equip
+        </p>
+      </div>
+    </div>
+
+    <h2
+      class="text-blue text-2xl font-black flex flex-row justify-center items-center mb-12"
+    >
+      Seamless hiring made easy in &nbsp;
+      <span class="text-green"> 3 simple steps </span>
+    </h2>
+
+    <div
+      class="flex flex-row mx-auto gap-5 w-9/12 justify-between text-blue mb-24"
+    >
+      <div
+        class="w-1/4 flex flex-row justify-center items-center mx-5 rounded-2xl"
+      >
+        <img class="" src="/1.png" alt="" />
+        <div class="flex flex-col items-center mb-5">
+          <span class="font-medium mb-3 text-center text-xl"
+            >Create & Share Assessment</span
+          >
+          <p class="text-sm text-center">
+            Using Equip’s Question Banks, or add your own questions
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="w-1/4 flex flex-row justify-center items-center mx-5 rounded-2xl"
+      >
+        <img class="" src="/2.png" alt="" />
+        <div class="flex flex-col items-center mb-5">
+          <span class="font-medium mb-3 text-center text-xl"
+            >Candidates finish Assessment remotely</span
+          >
+          <p class="text-sm text-center">
+            Typically, 30 mins to 1 hour. With anti-cheating measures
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="w-1/4 flex flex-row justify-center items-center mx-5 rounded-2xl"
+      >
+        <img class="" src="/3.png" alt="" />
+        <div class="flex flex-col items-center mb-5">
+          <span class="font-medium mb-3 text-center text-xl"
+            >Shortlist only the best performing candidates</span
+          >
+          <p class="text-sm text-center">
+            Equip automatically evaluates candidates’s responses
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  -->
+  <div class="bg-blue p-10">
+    <h3 class="text-2xl font-extrabold text-white text-center mb-4">
+      Discover the Power of Effective Candidate Testing Today!
+    </h3>
+    <p class="text-xs font-light text-white text-center mb-10">
+      Get started with Equip and streamline your hiring process
+    </p>
+
+    <div class="flex flex-row justify-center items-start w-max mx-auto relative">
+      <button
+        class="rounded-full bg-green px-8 py-3 font-bold text-white text-xs uppercase tracking-widest hover:scale-105 mx-5"
+      >
+        convinced? start hiring
+      </button>
+
+      <span>
+          <button
+          class="rounded-full bg-none px-8 py-3 text-green border font-bold border-green-800 text-xs uppercase tracking-widest hover:scale-105 mx-5"
+          >
+          not yet? let us help you
+        </button>
+        <p class="text-xs text-white font-thin text-center mt-3">
+            chat with us, we are live
+        </p>
+    </span>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
