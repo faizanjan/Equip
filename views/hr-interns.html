@@ -22,8 +22,8 @@
   <div class="flex flex-row flex-wrap justify-center">
     {% for intern in interns %}
     <li
-      class="list-none m-6 lg:m-12 bg-white rounded-2xl shadow-xl w-1/4"
-      style="min-width: 300px"
+      class="list-none m-6 lg:m-10 bg-white rounded-2xl shadow-xl w-1/3"
+      style="min-width: 326px; max-width: 350px;"
     >
       <div class="video-container w-full rounded-t-2xl border-amber-400">
         <video
@@ -34,7 +34,7 @@
         </video>
       </div>
 
-      <div class="card-body p-8 pb-4">
+      <div class="p-5 pb-4">
         <div
           class="particulars flex flex-row justify-between align-middle mb-auto"
         >
@@ -45,7 +45,7 @@
             >
               {{ intern.fields.Name }}
             </p>
-            <p class="overflow-ellipsis text-lg font-light">{{ intern.fields['College Name'] }}</p>
+            <p class="overflow-ellipsis text-lg font-light" >{{ intern.fields['College Name'] }}</p>
           </span>
           <a 
           style="width: 25px"
@@ -58,44 +58,53 @@
           </a>
         </div>
 
-        <div class="skills flex flex-col lg:flex-row my-4 justify-start">
+        <div class="skills flex flex-row my-4 justify-start">
           <span class="lang-apt">
-            <span class="skill-label text-xs text-slate-400 uppercase lg:me-5">
+            <span class="skill-label text-slate-400 uppercase" style="font-size: 12px;">
               Language & Aptitude Skills
             </span>
-            <p class="skill-level">
+            <p class="skill-level" >
               {{intern.fields['Language and Aptitude Skill']}}
             </p>
           </span>
 
-          <span class="hr-skills">
-            <span class="skill-label text-xs text-slate-400 uppercase">
+          <span class="hr-skills ms-4">
+            <span class="skill-label text-slate-400 uppercase" style="font-size: 12px;">
               Hr Skills
             </span>
             <p class="skill-level">{{intern.fields['HR Skills Quiz']}}</p>
           </span>
         </div>
 
-        <div class="contacts flex justify-around my-4 mt-12">
+        <div class="flex justify-around my-4 mt-12 ">
           <a
             type="email"
             href="mailto: {{intern.fields.Email}}"
-            class="text-xs mx-1 no-underline text-white bg-custom-blue rounded-full px-4 py-2 font-normal hover:text-white hover:no-underline"
+            class="flex flex-row justify-center items-center text-xs mx-1 no-underline text-white bg-custom-blue rounded-full px-4 py-2 font-normal hover:text-white hover:no-underline"
           >
-            EMAIL
+            <img src="/copy.png" alt="copy" class="me-1">
+            <span style="font-size: 10px;">
+              EMAIL
+            </span>
           </a>
           <button
-            class="text-xs mx-1 text-white bg-custom-blue rounded-full px-4 py-2 font-normal"
+            class="flex flex-row justify-center items-center text-xs mx-1 text-white bg-custom-blue rounded-full px-4 py-2 font-normal"
           >
-            MOBILE
+            <img src="/lock-closed.png" alt="locked" class="me-1">
+            <span style="font-size: 10px;">
+              MOBILE
+            </span>
           </button>
           <a
             download
             href="{{intern.fields.CV}}"
-            class="text-xs mx-1 no-underline text-white bg-custom-blue rounded-full px-4 py-2 font-normal hover:text-white hover:no-underline"
+            class="flex flex-row justify-center items-center text-xs mx-1 no-underline text-white bg-custom-blue rounded-full px-4 py-2 font-normal hover:text-white hover:no-underline"
           >
-            RESUME</a
-          >
+            <img src="/download.png" alt="download" class="me-1">
+            <span style="font-size: 10px;">
+              RESUME
+            </span>
+            </a>
         </div>
       </div>
     </li>
