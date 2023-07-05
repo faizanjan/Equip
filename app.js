@@ -6,6 +6,8 @@ var nunjucks = require('nunjucks');
 
 var app = express();
 
+app.use(express.static('assets'));
+
 // Setup nunjucks templating engine
 nunjucks.configure('views', {
     autoescape: true,
@@ -18,6 +20,14 @@ app.set('port', process.env.PORT || 3000);
 app.get('/', function (req, res) {
     res.render('index.html', {
         page: 'home',
+        port: app.get('port')
+    });
+});
+
+// Landing page
+app.get('/landing', function (req, res) {
+    res.render('landing.html', {
+        page: 'landing',
         port: app.get('port')
     });
 });

@@ -4,7 +4,7 @@
     class="flex flex-col md:flex-row md:justify-between p-5 w-10/12 mx-auto pt-16 mb-10 md:mb-0"
   >
     <h1
-      class="text-5xl sm:w-1/2 mb-10 md:mb-0"
+      class="text-3xl sm:w-1/2 mb-10 md:mb-0 font-black"
       style="font-family: lato; color: #2a3c8a"
     >
       Find the Best
@@ -12,7 +12,7 @@
     </h1>
 
     <h2
-      class="text-2xl md:self-center md:ms-24 md:w-1/2"
+      class="text-xl md:self-center md:ms-24 md:w-1/2"
       style="color: #2a3c8a"
     >
       Discover the right candidate through our pre-vetted list of skilled talent
@@ -22,8 +22,8 @@
   <div class="flex flex-row flex-wrap justify-center">
     {% for intern in interns %}
     <li
-      class="card list-none m-6 lg:m-12 bg-white rounded-2xl shadow-xl w-1/4"
-      style="min-width: 200px"
+      class="list-none m-6 lg:m-12 bg-white rounded-2xl shadow-xl w-1/4 h-min"
+      style="min-width: 300px"
     >
       <div class="video-container w-full rounded-t-2xl border-amber-400">
         <video
@@ -36,20 +36,22 @@
 
       <div class="card-body p-8 pb-4">
         <div
-          class="particulars flex flex-row justify-between align-middle mb-3"
+          class="particulars flex flex-row justify-between align-middle mb-auto"
         >
-          <span>
+          <span class="w-11/12">
             <p
-              class="font-semibold text-black text-3xl mb-2"
+              class="font-semibold text-black text-2xl mb-2"
               style="font-family: lato"
             >
               {{ intern.fields.Name }}
             </p>
-            <p class="overflow-ellipsis">{{ intern.fields['College Name'] }}</p>
+            <p class="overflow-ellipsis text-lg font-light">{{ intern.fields['College Name'] }}</p>
           </span>
-          <a href="{{intern.fields['Linkedin Url']}}" class="w-10">
+          <a 
+          style="width: 25px"
+          href="{{intern.fields['Linkedin Url']}}" >
             <img
-              style="min-width: 25px"
+            class="w-full"
               src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
               alt="LinkedIn_icon"
             />
@@ -58,7 +60,7 @@
 
         <div class="skills flex flex-col lg:flex-row my-4 justify-start">
           <span class="lang-apt">
-            <span class="skill-label text-sm text-slate-400 uppercase lg:me-14">
+            <span class="skill-label text-xs text-slate-400 uppercase lg:me-5">
               Language & Aptitude Skills
             </span>
             <p class="skill-level">
@@ -67,7 +69,7 @@
           </span>
 
           <span class="hr-skills">
-            <span class="skill-label text-base text-slate-400 uppercase">
+            <span class="skill-label text-xs text-slate-400 uppercase">
               Hr Skills
             </span>
             <p class="skill-level">{{intern.fields['HR Skills Quiz']}}</p>
@@ -78,19 +80,19 @@
           <a
             type="email"
             href="mailto: {{intern.fields.Email}}"
-            class="text-xs sm:text-sm md:text-lg mx-2 no-underline text-white bg-custom-blue rounded-full px-5 sm:px-3 lg:px-6 py-2 font-normal hover:text-white hover:no-underline"
+            class="text-xs mx-1 no-underline text-white bg-custom-blue rounded-full px-4 py-2 font-normal hover:text-white hover:no-underline"
           >
             EMAIL
           </a>
           <button
-            class="text-xs sm:text-sm md:text-lg mx-2 text-white bg-custom-blue rounded-full px-5 sm:px-3 lg:px-6 py-2 font-normal"
+            class="text-xs mx-1 text-white bg-custom-blue rounded-full px-4 py-2 font-normal"
           >
             MOBILE
           </button>
           <a
             download
             href="{{intern.fields.CV}}"
-            class="text-xs sm:text-sm md:text-lg mx-2 no-underline text-white bg-custom-blue rounded-full px-5 sm:px-3 lg:px-6 py-2 font-normal hover:text-white hover:no-underline"
+            class="text-xs mx-1 no-underline text-white bg-custom-blue rounded-full px-4 py-2 font-normal hover:text-white hover:no-underline"
           >
             RESUME</a
           >
