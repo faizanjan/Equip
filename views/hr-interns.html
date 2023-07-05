@@ -1,0 +1,121 @@
+{% extends 'index.html' %} {% block content %}
+<header class="flex flex-col md:flex-row  md:justify-between p-5 w-10/12 mx-auto mt-16 mb-10 md:mb-0">
+  <h1 class="text-5xl sm:w-1/2 mb-10 md:mb-0" style="font-family: lato; color: #2a3c8a">
+    Find the Best
+    <span style="color: #3bb98e"> HR Intern </span>for Your Team
+  </h1>
+
+  <h2 class="text-2xl md:self-center md:ms-24 md:w-1/2" style="color: #2a3c8a">
+    Discover the right candidate through our pre-vetted list of skilled talent
+    from top colleges
+  </h2>
+</header>
+<div class="flex flex-row flex-wrap justify-center">
+  {% for intern in interns %}
+  <li 
+    class="card list-none m-6 lg:m-12 bg-white rounded-2xl shadow-xl w-1/4"
+    style="min-width: 200px;">
+    <div class="video-container w-full rounded-t-2xl border-amber-400">
+      <video
+        class="plyr__video-embed pb-0 rounded-t-2xl "
+        id="player{{ forloop.counter }}"
+      >
+        <source src="{{ intern.fields['Video Link'] }}" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="card-body p-8 pb-4">
+      <div class="particulars flex flex-row justify-between align-middle mb-3">
+        <span>
+          <p
+            class="font-semibold text-black text-3xl mb-2"
+            style="font-family: lato"
+          >
+            {{ intern.fields.Name }}
+          </p>
+          <p class="overflow-ellipsis">{{ intern.fields['College Name'] }}</p>
+        </span>
+        <a href="{{intern.fields['Linkedin Url']}}" class="w-10">
+          <img
+            style="min-width: 25px;"
+            src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
+            alt="LinkedIn_icon"
+          />
+        </a>
+      </div>
+
+      <div class="skills flex flex-col lg:flex-row my-4 justify-start">
+        <span class="lang-apt">
+          <span class="skill-label text-sm text-slate-400 uppercase lg:me-14">
+            Language & Aptitude Skills
+          </span>
+          <p class="skill-level">
+            {{intern.fields['Language and Aptitude Skill']}}
+          </p>
+        </span>
+
+        <span class="hr-skills">
+          <span class="skill-label text-base text-slate-400 uppercase">
+            Hr Skills
+          </span>
+          <p class="skill-level">{{intern.fields['HR Skills Quiz']}}</p>
+        </span>
+      </div>
+
+      <div class="contacts flex justify-around my-4 mt-12">
+        <a
+          type="email"
+          href="mailto: {{intern.fields.Email}}"
+          class="text-xs sm:text-sm md:text-lg mx-2 no-underline text-white bg-custom-blue rounded-full px-5 sm:px-3 lg:px-6 py-2 font-normal hover:text-white hover:no-underline"
+        >
+          EMAIL
+        </a>
+        <button
+          class="text-xs sm:text-sm md:text-lg mx-2 text-white bg-custom-blue rounded-full px-5 sm:px-3 lg:px-6 py-2 font-normal"
+        >
+          MOBILE
+        </button>
+        <a
+          download
+          href="{{intern.fields.CV}}"
+          class="text-xs sm:text-sm md:text-lg mx-2 no-underline text-white bg-custom-blue rounded-full px-5 sm:px-3 lg:px-6 py-2 font-normal hover:text-white hover:no-underline"
+        >
+          RESUME</a
+        >
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</div>
+<script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const videos = Array.from(document.querySelectorAll(".video-container"));
+
+    videos.forEach((video, index) => {
+      let videoElement = video.firstElementChild;
+      const player = new Plyr(videoElement, {
+        controls: [
+          "play",
+          "play-large",
+          "progress",
+          "mute",
+          "volume",
+          "fullscreen",
+        ],
+        autoplay: false
+      });
+      player.elements.controls.style.display = "none";
+      video.addEventListener("mouseenter", () => {
+        player.elements.controls.style.display = "inherit";
+      });
+
+      video.addEventListener("mouseleave", () => {
+        player.elements.controls.style.display = "none";
+        player.pause();
+      });
+    });
+  });
+</script>
+
+{% endblock %}

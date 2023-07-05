@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Express &mp; Nunjucks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>HR Interns</title>
+    <style>
+        body {
+            font-family: raleway;
+        }
+
+        .bg-custom-blue {
+            background: #2a3c8a;
+        }
+        .plyr{
+            border-top-right-radius: 12px;
+            border-top-left-radius: 12px;
+        }
+    </style>
 </head>
-<body>
+
+<body class="bg-gradient-to-b from-blue-200 to-white">
     <header class="text-center">
-        <div class="bg-primary">
-            <div class="container">
-                <h3>Express &amp; Nunjucks</h3>
-                <br>
-            </div>
-        </div>
         <nav>
             <br>
             <ul class="list-inline">
                 <li><a href="/">home</a></li>
-                <li><a href="/example">example</a></li>
+                <li><a href="/hr-interns">hr-interns</a></li>
             </ul>
         </nav>
         <hr>
@@ -30,4 +50,6 @@
         <p class="muted">App running on port: <code>{{ port }}</code></p>
     </footer>
 </body>
+
+
 </html>
