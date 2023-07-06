@@ -1,24 +1,24 @@
 {% extends 'index.html' %} {% block content %}
 
-<div class="pb-96" style="font-family: lato">
+<div  style="font-family: lato">
   <!-- Hero -->
   <div class="my-0" style="background: linear-gradient(#dfe7fd, white)">
     <div class="flex flex-col items-center pt-16 mb-24">
-      <h2 class="text-5xl font-black mb-7 text-blue">
+      <h2 class="text-2xl lg:text-5xl font-black mb-7 text-blue mx-auto text-center lg:text-start">
         Shortist Candidates <span class="text-green">In Minutes</span>
       </h2>
 
-      <div class="flex flex-row items-center text-lg text-blue mb-10">
-        <h3>For tech and non-tech roles</h3>
+      <div class="flex flex-col lg:flex-row items-center text-base lg:text-lg text-blue mb-10">
+        <h3 class="mb-5 lg:mb-0">For tech and non-tech roles</h3>
         <div
-          class="h-8 mx-14 border"
+          class="h-8 mx-14 border hidden lg:inherit"
           style="background-color: #7387dd; width: 4px"
         ></div>
-        <h3>At $1 per candidate</h3>
+        <h3 class="text-base lg:text-lg">At $1 per candidate</h3>
       </div>
 
       <button
-        class="rounded-full bg-green px-8 py-3 text-white uppercase hover:scale-105 transition-all"
+        class="rounded-full bg-green px-8 py-3 text-white text-small lg:text-base uppercase hover:scale-105 transition-all"
       >
         Explore Tests
       </button>
@@ -32,8 +32,8 @@
         Why use <span class="text-green">Equip?</span>
       </h2>
 
-      <div class="flex flex-row justify-around w-10/12">
-        <div class="w-1/4 flex flex-row items-center">
+      <div class="flex flex-col items-start px-5 lg:flex-row justify-around lg:w-10/12">
+        <div class="mb-6 lg:mb-0 lg:w-1/4 flex flex-row items-center">
           <svg
             width="36"
             height="36"
@@ -56,7 +56,7 @@
           >
         </div>
 
-        <div class="w-1/4 flex flex-row items-center">
+        <div class=" mb-6 lg:mb-0 lg:w-1/4 flex flex-row items-center">
           <svg
             width="36"
             height="36"
@@ -78,7 +78,7 @@
           >
         </div>
 
-        <div class="w-1/4 flex flex-row items-center">
+        <div class=" mb-6 lg:mb-0 lg:w-1/4 flex flex-row items-center">
           <svg
             width="36"
             height="36"
@@ -99,13 +99,13 @@
       </div>
     </div>
 
-    <div class="flex flex-row justify-around items-center mx-20 pb-10">
-      <span class="text-3xl font-black text-blue w-1/3 leading-snug">
-        Give us he haystack, we'll find you the
+    <div class="flex flex-col lg:flex-row justify-around items-center mx-5 lg:mx-20 pb-10 text-center lg:text-start">
+      <span class="text-2xl lg:text-3xl font-black text-blue w-full lg:w-1/3 leading-snug mb-5 lg:mb-0">
+        Give us the haystack, we'll find you the
         <span class="text-green">sharp needle!</span>
       </span>
 
-      <span class="text-lg text-blue w-2/5 leading-7">
+      <span class="text-sm lg:text-lg text-blue lg:w-2/5 leading-7">
         Exceptional Companies are just teams of Exceptional Individuals. We’ll
         equip you with these exceptional individuals
       </span>
@@ -113,120 +113,130 @@
   </div>
 
   <!-- Features -->
-  <div class="bg-blue p-7 pb-0">
-    <div class="flex flex-row justify-between text-white">
+  <div class="bg-blue lg:p-7 p-5 pe-0 pb-10 lg:pb-0">
+    <div class="flex flex-row justify-between text-white overflow-x-scroll">
       <div
-        class="rounded-3xl box-border p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent w-1/4"
-      >
-        <h3 class="font-bold text-xl mb-4">Quick Assessment Creation</h3>
-        <span class="font-light"
+        class="rounded-3xl box-border py-5 px-3 lg:p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent lg:w-1/4"
+        style="min-width: 250px;"
+        >
+        <h3 class="font-bold text-base lg:text-xl mb-4">Quick Assessment Creation</h3>
+        <span class="font-light text-sm lg:text-base"
           >In less than 1 min, specify role, choose from suggested tests, set
           weightages for skills</span
         >
       </div>
 
       <div
-        class="rounded-3xl box-border p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent w-1/4"
-      >
-        <h3 class="font-bold text-xl mb-4">Simple Dashboard</h3>
-        <span class="font-light"
+        class="rounded-3xl box-border py-5 px-3 lg:p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent lg:w-1/4"
+        style="min-width: 250px;"
+        >
+        <h3 class="font-bold text-base lg:text-xl mb-4">Simple Dashboard</h3>
+        <span class="font-light text-sm lg:text-base"
           >Effortlessly manage candidate pipeline, set cut-off, sort by test
           scores, track stages, export results.</span
         >
       </div>
 
       <div
-        class="rounded-3xl box-border p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent w-1/4"
-      >
-        <h3 class="font-bold text-xl mb-4">Our Questions and Yours</h3>
-        <span class="font-light"
+        class="rounded-3xl box-border py-5 px-3 lg:p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent lg:w-1/4"
+        style="min-width: 250px;"
+        >
+        <h3 class="font-bold text-base lg:text-xl mb-4">Our Questions and Yours</h3>
+        <span class="font-light text-sm lg:text-base"
           >Use our Question Banks for the tests. Or add your own existing
           questions too</span
         >
       </div>
 
       <div
-        class="rounded-3xl box-border p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent w-1/4"
-      >
-        <h3 class="font-bold text-xl mb-4">Prevent Cheating on Tests</h3>
-        <span class="font-light"
+        class="rounded-3xl box-border py-5 px-3 lg:p-10 transition-all hover:text-white hover:border-blue-200/50 text-blue-300 font-normal border-2 border-transparent lg:w-1/4"
+        style="min-width: 250px;"
+        >
+        <h3 class="font-bold text-base lg:text-xl mb-4">Prevent Cheating on Tests</h3>
+        <span class="font-light text-sm lg:text-base"
           >Track candidates’ cameras and screens. Detect if they are using
           Google or ChatGPT, etc</span
         >
       </div>
     </div>
 
-    <div class="firefox-img">
-      <img class="mx-auto" src="/firefox_equip.png" alt="" />
+    <div class="firefox-img overflow-hidden ">
+      <img class="w[2vw] lg:w-inherit lg:mx-auto" src="/firefox_equip.png" style="max-width: none;" alt="" />
     </div>
   </div>
 
   <!-- Explore or Start Hiring -->
   <div
-    class="p-24 flex flex-row justify-center gap-5 text-blue w-11/12 mx-auto"
+    class="p-5 lg:p-24 flex flex-col md:flex-row justify-center gap-5 text-blue md:w-11/12 mx-auto"
   >
-    <div class="flex flex-col gap-5 w-3/5">
-      <div
-        class="flex flex-row justify-between items-center p-10 rounded-3xl hover:shadow-lg hover:scale-95 transition-all"
-        style="background: #ebe4ff"
-      >
-        <div class="me-10">
-          <h2 class="text-3xl font-black mb-5">Try our Demo Tests</h2>
-          <span class=""
-            >Do you hire Designers based on their Taxation skills? Of course
-            not! Our role-specific tests evaluate the relevant skills
-            perfectly</span
-          >
-          <a href="" class="block mt-8 uppercase font-bold tracking-widest"
-            >explore test &nbsp; &gt;</a
-          >
-        </div>
+    <div class="flex flex-col gap-5 md:w-3/5">
 
-        <img src="/exploreTest.png" />
+      <div
+      class="flex flex-col justify-between items-start p-5 md:p-10 rounded-3xl hover:shadow-lg hover:scale-95 transition-all"
+      style="background: #ebe4ff"
+    >
+    <h2 class="text-base md:text-3xl lg:text-4xl font-black mb-5 md:mb-3">Try our Demo Tests</h2>
+      <div class="flex flex-row justify-between items-center flex-grow mb-5 md:mb-3">
+        <span class="text-xs md:text-xl me-2  w-full md:w-2/3"
+          >Do you hire Designers based on their Taxation skills? Of course
+          not! Our role-specific tests evaluate the relevant skills
+          perfectly</span
+        >
+        <img style="max-width: 28%;" src="/exploreTest.png" />
       </div>
+      
+      <a href="" class="block  uppercase font-bold tracking-widest text-xs md:text-xl"
+        >explore test &nbsp; &gt;</a
+      >
+    </div>
 
       <div
-        class="flex flex-row justify-between items-center p-10 rounded-3xl hover:shadow-lg hover:scale-95 transition-all"
+        class="flex flex-col justify-between items-start p-5 md:p-10 rounded-3xl hover:shadow-lg hover:scale-95 transition-all"
         style="background: #c0e1bf"
       >
-        <div class="explore-body me-10">
-          <h2 class="text-3xl font-black mb-5">Explore Recruiter Dashboard</h2>
-          <span class=""
+      <h2 class="text-base md:text-3xl lg:text-4xl font-black mb-5 md:mb-3 ">Explore Recruiter Dashboard</h2>
+        <div class="flex flex-row justify-between items-center flex-grow mb-5 md:mb-3">
+          <span class="text-xs md:text-xl me-2 md:me-8  w-full md:w-2/3"
             >Preview how a recruiter dashboard would look. Play around with
             Assessments, Results, Shortlisting and other features</span
           >
-          <a href="" class="block mt-8 uppercase font-bold tracking-widest"
-            >explore dashboard &nbsp; &gt;</a
-          >
+          <img style="max-width: 28%;" src="/exploreDashboard.png" />
         </div>
-
-        <img src="/exploreDashboard.png" alt="" />
+        
+        <a href="" class="block  uppercase font-bold tracking-widest text-xs md:text-xl"
+          >explore dashboard &nbsp; &gt;</a
+        >
       </div>
     </div>
 
     <div
-      class="p-10 rounded-3xl w-2/5 hover:shadow-lg hover:scale-95 transition-all"
-      style="background-color: #d2deff"
-    >
-      <h2 class="text-3xl font-black mb-5">14-day Free Trial</h2>
-      <span>
-        Enjoy a 14-day free trial period - no credit card required. Experience
-        our product without commitments. Evaluate 25 candidates for free
-      </span>
-
-      <img class="my-8 ms-auto me-10" src="/startHiring.png" alt="" />
-
-      <a class="uppercase font-bold tracking-widest" href=""
-        >start hiring <br />
-        at $1/candidate &nbsp; &gt;</a
+        class="flex flex-col justify-between items-start md:w-2/5 p-5 md:p-10 rounded-3xl hover:shadow-lg hover:scale-95 transition-all"
+        style="background: #d2deff"
       >
-    </div>
+      <h2 class="text-base md:text-3xl lg:text-4xl font-black mb-5">14-day Free Trial</h2>
+        <div class="flex flex-row md:flex-col items-center flex-grow mb-5 md:mb-3">
+          <span class="text-xs md:text-xl me-2"
+            >Enjoy a 14-day free trial period - no credit card required. Experience
+            our product without commitments. Evaluate 25 candidates for free</span
+          >
+          <img
+
+           class="w-[28%] md:w-[45%] md:relative md:left-20 md:top-20"
+           src="/startHiring.png" />
+        </div>
+        
+        <a href="" class="block  uppercase font-bold tracking-widest text-xs md:text-lg"
+          >start hiring 
+          <div class="hidden md:block"></div>
+          at $1/candidate &nbsp; &gt;</a
+        >
+      </div>
   </div>
 
   <!--  -->
-  <div>
+  <div class="mt-10 lg:mt-0">
     <h2
-      class="text-blue text-2xl font-black flex flex-row justify-center items-center mb-12"
+      class="text-blue text-xl text-center lg:text-start lg:text-2xl font-black flex flex-col lg:flex-row justify-center items-center mb-12 px-8 lg:px-0"
     >
       <img class="me-5" src="lightening-bolt.png" alt="" />
       Our customers shortlist the top 3% performers, &nbsp;
@@ -234,45 +244,45 @@
     </h2>
 
     <div
-      class="flex flex-row mx-auto gap-5 w-9/12 justify-between text-blue mb-24"
+      class="flex flex-col lg:flex-row mx-auto gap-5 w-9/12 justify-between text-blue mb-24"
     >
       <div
-        class="w-1/3 mx-5 p-8 rounded-2xl hover:shadow-md"
+        class="w-full lg:w-1/3 lg:mx-5 p-8 rounded-2xl hover:shadow-lg"
         style="background: #f9fafb"
       >
         <h3 class="flex flex-row items-center mb-5">
           <img class="" src="/ready-to-use-tests.png" alt="" />
-          <span class="ms-3 text-xl font-medium">Ready-to-Use Tests</span>
+          <span class="ms-3 text-base lg:text-xl font-medium">Ready-to-Use Tests</span>
         </h3>
-        <p class="text-sm leading-6">
+        <p class="text-sm lg:text-base leading-6">
           Tests for Aptitude, Programming, Communication & Interpersonal Skills,
           etc
         </p>
       </div>
 
       <div
-        class="w-1/3 mx-5 p-8 rounded-2xl hover:shadow-md"
+        class="w-full lg:w-1/3 lg:mx-5 p-8 rounded-2xl hover:shadow-lg"
         style="background: #f9fafb"
       >
         <h3 class="flex flex-row items-center mb-5">
           <img class="" src="/skill-based-questions.png" alt="" />
-          <span class="ms-3 text-xl font-medium">Skill-based Questions</span>
+          <span class="ms-3 text-base lg:text-xl font-medium">Skill-based Questions</span>
         </h3>
-        <p class="text-sm leading-6">
+        <p class="text-sm lg:text-base leading-6">
           We test for Knowledge needed to perform the job competently. Not to
           pass an Entrance exam.
         </p>
       </div>
 
       <div
-        class="w-1/3 mx-5 p-8 rounded-2xl hover:shadow-md"
+        class="w-full lg:w-1/3 lg:mx-5 p-8 rounded-2xl hover:shadow-lg"
         style="background: #f9fafb"
       >
         <h3 class="flex flex-row items-center mb-5">
           <img class="" src="/pricing-that-scales.png" alt="" />
-          <span class="ms-3 text-xl font-medium">Pricing that Scales</span>
+          <span class="ms-3 text-base lg:text-xl font-medium">Pricing that Scales</span>
         </h3>
-        <p class="text-sm leading-6">
+        <p class="text-sm lg:text-base leading-6">
           Small and large teams assess tens to tens of thousands of candidates
           on Equip
         </p>
@@ -280,52 +290,52 @@
     </div>
 
     <h2
-      class="text-blue text-2xl font-black flex flex-row justify-center items-center mb-12"
+      class="text-blue text-2xl lg:text-3xl text-center lg:text-start font-black flex flex-col lg:flex-row justify-center items-center mb-12 px-8 lg:px-0"
     >
       Seamless hiring made easy in &nbsp;
       <span class="text-green"> 3 simple steps </span>
     </h2>
 
     <div
-      class="flex flex-row mx-auto gap-5 w-9/12 justify-between text-blue mb-24"
+      class="flex flex-col lg:flex-row mx-auto gap-5 w-9/12 justify-between text-blue mb-24"
     >
       <div
-        class="w-1/4 flex flex-row justify-center items-center mx-5 rounded-2xl"
+        class="w-full  lg:w-1/4 flex flex-row justify-center items-center lg:mx-5 rounded-2xl"
       >
         <img class="" src="/1.png" alt="" />
-        <div class="flex flex-col items-center mb-5">
-          <span class="font-medium mb-3 text-center text-xl"
+        <div class="flex flex-col items-center mb-5 relative -left-4 lg:left-0">
+          <span class="font-medium mb-3 text-center text-xl "
             >Create & Share Assessment</span
           >
-          <p class="text-sm text-center">
-            Using Equip’s Question Banks, or add your own questions
+          <p class="text-sm lg:text-base text-center">
+            Using Equip&apos;s Question Banks, or add your own questions
           </p>
         </div>
       </div>
 
       <div
-        class="w-1/4 flex flex-row justify-center items-center mx-5 rounded-2xl"
+        class="w-full  lg:w-1/4 flex flex-row justify-center items-center lg:mx-5 rounded-2xl"
       >
         <img class="" src="/2.png" alt="" />
-        <div class="flex flex-col items-center mb-5">
-          <span class="font-medium mb-3 text-center text-xl"
+        <div class="flex flex-col items-center mb-5 relative -left-4 lg:left-0">
+          <span class="font-medium mb-3 text-center text-xl "
             >Candidates finish Assessment remotely</span
           >
-          <p class="text-sm text-center">
+          <p class="text-sm lg:text-base text-center">
             Typically, 30 mins to 1 hour. With anti-cheating measures
           </p>
         </div>
       </div>
 
       <div
-        class="w-1/4 flex flex-row justify-center items-center mx-5 rounded-2xl"
+        class="w-full  lg:w-1/4 flex flex-row justify-center items-center lg:mx-5 rounded-2xl"
       >
         <img class="" src="/3.png" alt="" />
-        <div class="flex flex-col items-center mb-5">
-          <span class="font-medium mb-3 text-center text-xl"
+        <div class="flex flex-col items-center mb-5 relative -left-4 lg:left-0">
+          <span class="font-medium mb-3 text-center text-xl "
             >Shortlist only the best performing candidates</span
           >
-          <p class="text-sm text-center">
+          <p class="text-sm lg:text-base text-center">
             Equip automatically evaluates candidates’s responses
           </p>
         </div>
@@ -335,25 +345,25 @@
 
   <!--  -->
   <div class="bg-blue p-10 mb-16">
-    <h3 class="text-2xl font-extrabold text-white text-center mb-4">
+    <h3 class="text-2xl lg:text-3xl font-extrabold text-white text-center mb-4">
       Discover the Power of Effective Candidate Testing Today!
     </h3>
-    <p class="text-xs font-light text-white text-center mb-10">
+    <p class="text-base font-light text-white text-center mb-10">
       Get started with Equip and streamline your hiring process
     </p>
 
     <div
-      class="flex flex-row justify-center items-start w-max mx-auto relative"
+      class="flex flex-col lg:flex-row justify-center items-start w-max mx-auto relative"
     >
       <button
-        class="rounded-full bg-green px-8 py-3 font-bold text-white text-xs uppercase tracking-widest hover:scale-105 mx-5"
+        class="rounded-full bg-green px-8 py-3 font-bold text-white text-xs uppercase tracking-widest hover:scale-105 mb-5 lg:mb-0 lg:mx-5"
       >
         convinced? start hiring
       </button>
 
       <span>
         <button
-          class="rounded-full bg-none px-8 py-3 text-green border font-bold border-green-800 text-xs uppercase tracking-widest hover:scale-105 mx-5"
+          class="rounded-full bg-none px-8 py-3 text-green border font-bold border-green-800 text-xs uppercase tracking-widest hover:scale-105 lg:mx-5"
         >
           not yet? let us help you
         </button>
@@ -365,42 +375,42 @@
   </div>
 
   <!-- Customer reviews -->
-  <div class="flex flex-col items-center w-5/6 mx-auto mb-28">
-    <div class="flex flex-row justify-between w-full px-4 mb-6">
-      <h2 class="text-2xl text-blue font-black">
+  <div class="flex flex-col items-center w-5/6 mx-auto mb-16 lg:mb-28">
+    <div class="flex flex-col text-center lg:text-start lg:flex-row justify-between w-full px-4 mb-6">
+      <h2 class="text-2xl text-blue font-black mb-5 lg:mb-0">
         Our customers love hiring
         <span class="text-green"> via Equip </span>
       </h2>
       <a
         href=""
-        class="uppercase tracking-widest text-blue font-black hover:border-b transition-all border-b-blue-800"
+        class="uppercase text-base lg:tracking-widest text-blue font-black hover:border-b transition-all border-b-blue-800"
       >
         Read more reviews on g2 &gt;</a
       >
     </div>
 
     <div
-      class="flex overflow-x-scroll scroll-snap-type-x-mandatory w-full"
+      class="flex overflow-x-scroll scroll-snap-type-x-mandatory w-screen ps-5 lg:ps-0 lg:w-full"
       id="review-cards"
     >
       <div
-        class="flex-none box-border p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-5 hover:scale-95 transition-all"
-        style="width: 30%"
+        class="w-9/12 lg:w-[30%] flex-none box-border p-6 py-5  lg:p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-2 lg:mx-5 hover:scale-95 transition-all"
+       
       >
         <h3
-          class="text-lg font-normal mb-5 tracking-wide"
+          class="text-sm lg:text-base font-normal mb-2 lg:mb-5 tracking-wide"
           style="font-family: 'DM Serif Display'"
         >
           Proctored evaluations made easy
         </h3>
-        <p class="font-lighter text-sm leading-6">
+        <p class="font-lighter text-xs lg:text-sm leading-4 lg:leading-6">
           “Being a teacher I can understand how important this application is
           for us and the students who are using this. Hats off to the
           developers”
         </p>
         <span>
           <h3
-            class="text-sm font-normal mb-1 mt-5 tracking-wide"
+            class="text-xs lg:text-sm font-normal lg:mb-1 mt-3 lg:mt-5 tracking-wide"
             style="font-family: 'DM Serif Display'"
           >
             Mahesh T
@@ -408,27 +418,27 @@
           <p class="font-lightest text-xs">Co-Founder, English for India</p>
         </span>
 
-        <img class="mt-2" src="/reviewer-company.png" alt="" />
+        <img class="lg:mt-2" src="/reviewer-company.png" alt="" />
       </div>
 
       <div
-        class="flex-none box-border p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-5 hover:scale-95 transition-all"
-        style="width: 30%"
+        class="w-9/12 lg:w-[30%] flex-none box-border p-6 py-5  lg:p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-2 lg:mx-5 hover:scale-95 transition-all"
+       
       >
         <h3
-          class="text-lg font-normal mb-5 tracking-wide"
+          class="text-sm lg:text-base font-normal mb-2 lg:mb-5 tracking-wide"
           style="font-family: 'DM Serif Display'"
         >
           Proctored evaluations made easy
         </h3>
-        <p class="font-lighter text-sm leading-6">
+        <p class="font-lighter text-xs lg:text-sm leading-4 lg:leading-6">
           “Being a teacher I can understand how important this application is
           for us and the students who are using this. Hats off to the
           developers”
         </p>
         <span>
           <h3
-            class="text-sm font-normal mb-1 mt-5 tracking-wide"
+            class="text-xs lg:text-sm font-normal lg:mb-1 mt-3 lg:mt-5 tracking-wide"
             style="font-family: 'DM Serif Display'"
           >
             Mahesh T
@@ -436,27 +446,27 @@
           <p class="font-lightest text-xs">Co-Founder, English for India</p>
         </span>
 
-        <img class="mt-2" src="/reviewer-company.png" alt="" />
+        <img class="lg:mt-2" src="/reviewer-company.png" alt="" />
       </div>
 
       <div
-        class="flex-none box-border p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-5 hover:scale-95 transition-all"
-        style="width: 30%"
+        class="w-9/12 lg:w-[30%] flex-none box-border p-6 py-5  lg:p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-2 lg:mx-5 hover:scale-95 transition-all"
+       
       >
         <h3
-          class="text-lg font-normal mb-5 tracking-wide"
+          class="text-sm lg:text-base font-normal mb-2 lg:mb-5 tracking-wide"
           style="font-family: 'DM Serif Display'"
         >
           Proctored evaluations made easy
         </h3>
-        <p class="font-lighter text-sm leading-6">
+        <p class="font-lighter text-xs lg:text-sm leading-4 lg:leading-6">
           “Being a teacher I can understand how important this application is
           for us and the students who are using this. Hats off to the
           developers”
         </p>
         <span>
           <h3
-            class="text-sm font-normal mb-1 mt-5 tracking-wide"
+            class="text-xs lg:text-sm font-normal lg:mb-1 mt-3 lg:mt-5 tracking-wide"
             style="font-family: 'DM Serif Display'"
           >
             Mahesh T
@@ -464,27 +474,27 @@
           <p class="font-lightest text-xs">Co-Founder, English for India</p>
         </span>
 
-        <img class="mt-2" src="/reviewer-company.png" alt="" />
+        <img class="lg:mt-2" src="/reviewer-company.png" alt="" />
       </div>
 
       <div
-        class="flex-none box-border p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-5 hover:scale-95 transition-all"
-        style="width: 30%"
+        class="w-9/12 lg:w-[30%] flex-none box-border p-6 py-5  lg:p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-2 lg:mx-5 hover:scale-95 transition-all"
+       
       >
         <h3
-          class="text-lg font-normal mb-5 tracking-wide"
+          class="text-sm lg:text-base font-normal mb-2 lg:mb-5 tracking-wide"
           style="font-family: 'DM Serif Display'"
         >
           Proctored evaluations made easy
         </h3>
-        <p class="font-lighter text-sm leading-6">
+        <p class="font-lighter text-xs lg:text-sm leading-4 lg:leading-6">
           “Being a teacher I can understand how important this application is
           for us and the students who are using this. Hats off to the
           developers”
         </p>
         <span>
           <h3
-            class="text-sm font-normal mb-1 mt-5 tracking-wide"
+            class="text-xs lg:text-sm font-normal lg:mb-1 mt-3 lg:mt-5 tracking-wide"
             style="font-family: 'DM Serif Display'"
           >
             Mahesh T
@@ -492,27 +502,27 @@
           <p class="font-lightest text-xs">Co-Founder, English for India</p>
         </span>
 
-        <img class="mt-2" src="/reviewer-company.png" alt="" />
+        <img class="lg:mt-2" src="/reviewer-company.png" alt="" />
       </div>
 
       <div
-        class="flex-none box-border p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-5 hover:scale-95 transition-all"
-        style="width: 30%"
+        class="w-9/12 lg:w-[30%] flex-none box-border p-6 py-5  lg:p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-2 lg:mx-5 hover:scale-95 transition-all"
+       
       >
         <h3
-          class="text-lg font-normal mb-5 tracking-wide"
+          class="text-sm lg:text-base font-normal mb-2 lg:mb-5 tracking-wide"
           style="font-family: 'DM Serif Display'"
         >
           Proctored evaluations made easy
         </h3>
-        <p class="font-lighter text-sm leading-6">
+        <p class="font-lighter text-xs lg:text-sm leading-4 lg:leading-6">
           “Being a teacher I can understand how important this application is
           for us and the students who are using this. Hats off to the
           developers”
         </p>
         <span>
           <h3
-            class="text-sm font-normal mb-1 mt-5 tracking-wide"
+            class="text-xs lg:text-sm font-normal lg:mb-1 mt-3 lg:mt-5 tracking-wide"
             style="font-family: 'DM Serif Display'"
           >
             Mahesh T
@@ -520,27 +530,27 @@
           <p class="font-lightest text-xs">Co-Founder, English for India</p>
         </span>
 
-        <img class="mt-2" src="/reviewer-company.png" alt="" />
+        <img class="lg:mt-2" src="/reviewer-company.png" alt="" />
       </div>
 
       <div
-        class="flex-none box-border p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-5 hover:scale-95 transition-all"
-        style="width: 30%"
+        class="w-9/12 lg:w-[30%] flex-none box-border p-6 py-5  lg:p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-2 lg:mx-5 hover:scale-95 transition-all"
+       
       >
         <h3
-          class="text-lg font-normal mb-5 tracking-wide"
+          class="text-sm lg:text-base font-normal mb-2 lg:mb-5 tracking-wide"
           style="font-family: 'DM Serif Display'"
         >
           Proctored evaluations made easy
         </h3>
-        <p class="font-lighter text-sm leading-6">
+        <p class="font-lighter text-xs lg:text-sm leading-4 lg:leading-6">
           “Being a teacher I can understand how important this application is
           for us and the students who are using this. Hats off to the
           developers”
         </p>
         <span>
           <h3
-            class="text-sm font-normal mb-1 mt-5 tracking-wide"
+            class="text-xs lg:text-sm font-normal lg:mb-1 mt-3 lg:mt-5 tracking-wide"
             style="font-family: 'DM Serif Display'"
           >
             Mahesh T
@@ -548,27 +558,27 @@
           <p class="font-lightest text-xs">Co-Founder, English for India</p>
         </span>
 
-        <img class="mt-2" src="/reviewer-company.png" alt="" />
+        <img class="lg:mt-2" src="/reviewer-company.png" alt="" />
       </div>
 
       <div
-        class="flex-none box-border p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-5 hover:scale-95 transition-all"
-        style="width: 30%"
+        class="w-9/12 lg:w-[30%] flex-none box-border p-6 py-5  lg:p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-2 lg:mx-5 hover:scale-95 transition-all"
+       
       >
         <h3
-          class="text-lg font-normal mb-5 tracking-wide"
+          class="text-sm lg:text-base font-normal mb-2 lg:mb-5 tracking-wide"
           style="font-family: 'DM Serif Display'"
         >
           Proctored evaluations made easy
         </h3>
-        <p class="font-lighter text-sm leading-6">
+        <p class="font-lighter text-xs lg:text-sm leading-4 lg:leading-6">
           “Being a teacher I can understand how important this application is
           for us and the students who are using this. Hats off to the
           developers”
         </p>
         <span>
           <h3
-            class="text-sm font-normal mb-1 mt-5 tracking-wide"
+            class="text-xs lg:text-sm font-normal lg:mb-1 mt-3 lg:mt-5 tracking-wide"
             style="font-family: 'DM Serif Display'"
           >
             Mahesh T
@@ -576,27 +586,27 @@
           <p class="font-lightest text-xs">Co-Founder, English for India</p>
         </span>
 
-        <img class="mt-2" src="/reviewer-company.png" alt="" />
+        <img class="lg:mt-2" src="/reviewer-company.png" alt="" />
       </div>
 
       <div
-        class="flex-none box-border p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-5 hover:scale-95 transition-all"
-        style="width: 30%"
+        class="w-9/12 lg:w-[30%] flex-none box-border p-6 py-5  lg:p-8 scroll-snap-align-start text-blue shadow-lg rounded-3xl my-8 mx-2 lg:mx-5 hover:scale-95 transition-all"
+       
       >
         <h3
-          class="text-lg font-normal mb-5 tracking-wide"
+          class="text-sm lg:text-base font-normal mb-2 lg:mb-5 tracking-wide"
           style="font-family: 'DM Serif Display'"
         >
           Proctored evaluations made easy
         </h3>
-        <p class="font-lighter text-sm leading-6">
+        <p class="font-lighter text-xs lg:text-sm leading-4 lg:leading-6">
           “Being a teacher I can understand how important this application is
           for us and the students who are using this. Hats off to the
           developers”
         </p>
         <span>
           <h3
-            class="text-sm font-normal mb-1 mt-5 tracking-wide"
+            class="text-xs lg:text-sm font-normal lg:mb-1 mt-3 lg:mt-5 tracking-wide"
             style="font-family: 'DM Serif Display'"
           >
             Mahesh T
@@ -604,32 +614,42 @@
           <p class="font-lightest text-xs">Co-Founder, English for India</p>
         </span>
 
-        <img class="mt-2" src="/reviewer-company.png" alt="" />
+        <img class="lg:mt-2" src="/reviewer-company.png" alt="" />
       </div>
     </div>
-    <div class="flex justify-center mt-4" id="navigation-circles"></div>
+    <div class=" justify-center mt-4 hidden lg:flex" id="navigation-circles"></div>
   </div>
 
   <!-- Achievements -->
   <div class="flex flex-col items-center">
-    <div class="flex flex-row justify-between mb-8">
-      <h3 class="text-3xl text-blue font-extrabold w-1/2">
+    <div class="flex flex-col lg:flex-row justify-between mb-8 text-center">
+      <h3 class="text-xl lg:text-3xl text-blue font-extrabold lg:w-1/2 px-2 mb-5 lg:mb-0">
         Winning isn't everything!
       </h3>
-      <span class="w-1/2 text-blue text-xl leading-8">
-        But we’re not complaining. These are a few of our favourite achievements
+      <span class="lg:w-1/2 px-2 text-blue text-sm lg:text-xl lg:leading-8">
+        But we&apos;re not complaining. These are a few of our favourite achievements
         from <strong>G2</strong> the past few years
       </span>
     </div>
 
     <div
-      class="w-screen bg-cover bg-no-repeat bg-center"
+      class="w-screen bg-cover bg-no-repeat bg-center hidden lg:block"
       style="
         background-image: url('/achievements.png');
         min-height: 350px;
         background-color: #c0e1bf;
       "
     ></div>
+
+    <div
+      class="w-screen bg-contain bg-no-repeat bg-center lg:hidden"
+      style="
+        background-image: url('/achievements-mobile.png');
+        min-height: 350px;
+        background-color: #c0e1bf;
+      "
+    ></div>
+
   </div>
 </div>
 
