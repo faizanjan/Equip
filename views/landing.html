@@ -624,9 +624,12 @@
 
     <div
       class="w-screen bg-cover bg-no-repeat bg-center"
-      style="background-image: url('/achievements.png'); min-height: 350px; background-color: #C0E1BF;"
-    >
-  </div>
+      style="
+        background-image: url('/achievements.png');
+        min-height: 350px;
+        background-color: #c0e1bf;
+      "
+    ></div>
   </div>
 </div>
 
@@ -643,36 +646,45 @@
     circle.classList.add(
       "w-3",
       "h-3",
-      "bg-gray-500",
+      "bg-gray-300",
       "rounded-full",
       "mx-1",
       "cursor-pointer"
     );
-    circle.addEventListener("click", () => scrollToCardGroup(i));
+    circle.addEventListener("click", () => {
+      scrollToCardGroup(i);
+    });
     navigationCirclesContainer.appendChild(circle);
   }
 
-  navigationCirclesContainer.children[0].classList.remove("bg-gray-500");
+  navigationCirclesContainer.children[0].classList.remove("bg-gray-300");
   navigationCirclesContainer.children[0].classList.add("bg-blue");
-  console.log(navigationCirclesContainer.children);
+
+  reviewCardsContainer.addEventListener("scroll", handleScroll);
+
+  function handleScroll() {
+    const scrollPosition =
+      reviewCardsContainer.scrollLeft + reviewCardsContainer.offsetWidth / 2;
+    const index = Math.floor(scrollPosition / reviewCardsContainer.offsetWidth);
+    updateActiveCircle(index);
+  }
+
   function scrollToCardGroup(index) {
     const scrollPosition = index * reviewCardsContainer.offsetWidth;
     reviewCardsContainer.scrollTo({
       left: scrollPosition,
       behavior: "smooth",
     });
-
-    updateActiveCircle(index);
   }
 
   function updateActiveCircle(index) {
     const activeCircle = navigationCirclesContainer.querySelector(".bg-blue");
     if (activeCircle) {
+      activeCircle.classList.add("bg-gray-300");
       activeCircle.classList.remove("bg-blue");
-      activeCircle.classList.add("bg-gray-500");
     }
-    navigationCirclesContainer.children[index].classList.remove("bg-gray-500");
     navigationCirclesContainer.children[index].classList.add("bg-blue");
+    navigationCirclesContainer.children[index].classList.remove("bg-gray-300");
   }
 </script>
 
