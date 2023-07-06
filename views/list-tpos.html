@@ -1,0 +1,75 @@
+{% extends 'index.html' %} {% block content %}
+
+<div style="font-style: lato">
+  <div
+    class="p-8 text-center"
+    style="background: linear-gradient(#dfe7fd, white)"
+  >
+    <h2 class="text-3xl font-extrabold text-blue mb-10">
+      List of Training Offices &
+      <span class="text-green"> Placement Cell Coordinators</span>
+    </h2>
+    <p class="text-blue text-base mb-12">
+      <strong>Gain lifetime access</strong> to an expanding database of Indian
+      Colleges and Universities' Placement Cells
+    </p>
+
+    <div class="flex flex-row justify-between w-7/12 mx-auto">
+      <span class="flex flex-row text-blue items-center">
+        <img src="/tpos/access-for-multiple-teams.png" alt="" />
+        <span class="ms-3 text-base">Access for multiple team members</span>
+      </span>
+
+      <span class="flex flex-row text-blue items-center">
+        <img src="/tpos/placement-cells.png" alt="" />
+        <span class="ms-3 text-base">800+ placement cells</span>
+      </span>
+
+      <span class="flex flex-row text-blue items-center">
+        <img src="tpos/updates.png" alt="" />
+        <span class="ms-3 text-base">Free & ongoing updates</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="mt-4 lg:mt-8 w-11/12 mx-auto">
+    <iframe
+      class="airtable-embed"
+      src="https://airtable.com/embed/shrjZNxZh90UJDAdw/tblRpofixoJUci45N?backgroundColor=blue&viewControls=on"
+      frameborder="0"
+      onmousewheel=""
+      width="100%"
+      height="533"
+      style="background: transparent; border: 1px solid #ccc"
+    ></iframe>
+  </div>
+
+  <div
+    class="flex flex-col lg:flex-row justify-center items-start w-max mx-auto relative mt-24"
+  >
+    <a
+      type="button"
+      href="https://www.google.com"
+      target="_blank"
+      class="rounded-full border bg-green-600 px-8 py-3 font-bold text-white text-xs uppercase tracking-widest hover:scale-105 mb-5 lg:mb-0 lg:mx-5"
+    >
+      purchase for ₹999 only
+    </a>
+
+    <a
+      href="https://drive.google.com/uc?export=download&id=1cUzFp3VHK1bkq8Tmod9rkSyazKrce_G0"
+      download
+      class="flex flex-row items-center rounded-full bg-none px-8 py-3 text-green border-2 font-bold border-green-500 text-xs uppercase tracking-widest hover:scale-105 lg:mx-5"
+    >
+      <img class="me-5" src="/tpos/download.png" alt="" />
+      Download Sample PDF
+    </a>
+  </div>
+
+  <h4 class="my-20 mx-auto text-base text-blue text-center w-2/3">
+    If you're from a Placement Cell and would us like to update your information
+    in our database, reach out to us <strong> hello@equip.co</strong>
+  </h4>
+</div>
+
+{% endblock %}

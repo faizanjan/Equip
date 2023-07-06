@@ -32,6 +32,14 @@ app.get('/landing', function (req, res) {
     });
 });
 
+// TPOs
+app.get('/list-tpos-placement-cells', function (req, res){
+    res.render('list-tpos.html',{
+        page: 'list-tpos-placement-cells',
+        port: app.get('port')
+    })
+})
+
 // Other example
 app.get('/hr-interns', function (req, res) {
     const baseId = process.env.BASE_ID;
